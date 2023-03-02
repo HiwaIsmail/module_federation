@@ -29,16 +29,12 @@ return (
 	Counter App
 	<div style={{
 		fontSize: '120%',
-		position: 'relative',
-		top: '10vh',
 	}}>
 		{counter}
 	</div>
 	<div className="buttons">
 		<button style={{
 		fontSize: '60%',
-		position: 'relative',
-		top: '20vh',
 		marginRight: '5px',
 		backgroundColor: 'green',
 		borderRadius: '8%',
@@ -47,8 +43,6 @@ return (
 		onClick={handleClick1}>Increment</button>
 		<button style={{
 		fontSize: '60%',
-		position: 'relative',
-		top: '20vh',
 		marginLeft: '5px',
 		backgroundColor: 'red',
 		borderRadius: '8%',

@@ -16,13 +16,15 @@ const App = () => {
 
   return (
     <div className="mt-10 text-3xl mx-auto max-w-6xl">
-    <div>Name: react-shell</div>
-    <div>Framework: react</div>
-    <div>Language: JavaScript</div>
-    <div>CSS: Tailwind</div>
-    <div ref={divRef}></div>
-    <Counter/>
-  </div>
+      <div style={{backgroundColor: "green"}}>Name: react-shell</div>
+      
+      <div class="apps-wrapper">
+        <div style={{borderStyle: "dashed", margin: "100px"}} ref={divRef}></div>
+        <div style={{border: "solid black 2px"}}>
+          <Counter/>
+        </div>
+      </div>
+    </div>
   )
 };
 ReactDOM.render(<App />, document.getElementById("app"));
