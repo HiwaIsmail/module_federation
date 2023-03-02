@@ -3,28 +3,33 @@ import ReactDOM from "react-dom";
 
 import Counter from "remote_react/Counter";
 
-import wrapper from "remote_solid/wrapper"
+import wrapper from "remote_solid/wrapper";
 
 import "./index.scss";
 
 const App = () => {
-  const divRef = useRef(null)
+    const divRef = useRef(null);
 
-  useEffect(() => {
-    wrapper(divRef.current)
-  }, [])
+    useEffect(() => {
+        wrapper(divRef.current);
+    }, []);
 
-  return (
-    <div className="mt-10 text-3xl mx-auto max-w-6xl">
-      <div style={{backgroundColor: "green"}}>Name: react-shell</div>
-      
-      <div class="apps-wrapper">
-        <div style={{borderStyle: "dashed", margin: "100px"}} ref={divRef}></div>
-        <div style={{border: "solid black 2px"}}>
-          <Counter/>
+    return (
+        <div>
+            <div className="top-app-bar">
+                <span className="material-symbols-outlined top-app-bar-icon">
+                    menu
+                </span>
+                <div className="top-app-bar-title">React Shell</div>
+            </div>
+
+            <div className="apps-wrapper mt-10 text-3xl mx-auto max-w-6xl">
+                <div className="remote-solid-wrapper" ref={divRef}></div>
+                <div className="remote-solid-wrapper">
+                    <Counter/>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  )
+    );
 };
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App/>, document.getElementById("app"));
